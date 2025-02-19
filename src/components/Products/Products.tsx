@@ -16,7 +16,7 @@ function Products() {
       {products ? (
         products.length > 0 ? (
           products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product}/>
           ))
         ) : (
           <>

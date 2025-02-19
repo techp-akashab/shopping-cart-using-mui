@@ -19,11 +19,13 @@ import {
   CardContent,
 } from "@mui/material";
 import { TranslationKeys } from "../../lang/TranslationKeys";
+import { useNavigate } from "react-router-dom";
 interface ProductCardProps {
   product: Product;
 }
 function ProductCard({ product }: ProductCardProps) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const [quantity, setQuantity] = useState(
     (cartItems[product.id] && cartItems[product.id].quantity) || 0
@@ -40,6 +42,9 @@ function ProductCard({ product }: ProductCardProps) {
       dispatch(changeQuantity({ id: product.id, product, quantity }));
     }
   };
+  const handleNavigateToDetails = () => {
+    navigate(`/product/${product.id}`);
+  };
   return (
     <Card sx={{ width: { xs: "100vw", md: 250 }, p: 2, textAlign: "center" }}>
       <CardMedia
@@ -52,7 +57,9 @@ function ProductCard({ product }: ProductCardProps) {
           maxHeight: "200px",
           objectFit: "contain",
           aspectRatio: "1/1",
+          cursor: "pointer",
         }}
+        onClick={handleNavigateToDetails}
       />
       <CardContent>
         <Box

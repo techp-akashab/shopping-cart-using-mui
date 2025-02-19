@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import Home from './components/Home/Home'
 import Products from './components/Products/Products.tsx'
 import Cart from './components/Cart/Cart'
+import ProductDetail from './components/Products/ProductDetail'
 import './components/i18n.ts';
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<App />}>
             <Route path="" element={<Home/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/product/:id" element={<ProductDetail/>}/>
             <Route path="/cart" element={<Cart/>}/>
           </Route>
         </Routes>
