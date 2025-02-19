@@ -7,4 +7,5 @@ export enum TranslationKeys {
   CART = "cart_tab",
   BUY_NOW = "buy_now",
   DELETE = "delete",
+  PROCEED_TO_BUY = "proceed_to_buy",
 }
