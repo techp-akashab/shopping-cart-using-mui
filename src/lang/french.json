@@ -1,0 +1,10 @@
+{
+  "home": "Maison",
+  "product_tab": "Produits",
+  "shop_best": "Achetez le meilleur de la boutique",
+  "no_product": "Aucun produit dans le panier. <shop_link>Achetez des produits</shop_link>",
+  "add_to_cart": "Ajouter au panier",
+  "cart_tab": "panier",
+  "buy_now": "Acheter maintenant",
+  "delete": "Supprimer"
+}
