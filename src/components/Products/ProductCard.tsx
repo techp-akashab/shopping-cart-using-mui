@@ -46,7 +46,7 @@ function ProductCard({ product }: ProductCardProps) {
     navigate(`/product/${product.id}`);
   };
   return (
-    <Card sx={{ width: { xs: "100vw", md: 250 }, p: 2, textAlign: "center" }}>
+    <Card sx={{ width:{xs:200, md: 250}, p: 2, textAlign: "center" }}>
       <CardMedia
         component="img"
         image={product.image}

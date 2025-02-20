@@ -12,36 +12,66 @@ function Products() {
     dispatch(fetchProducts());
   }, []);
   return (
-    <Grid2 container spacing={2} marginTop="2rem" justifyContent="center">
+    <Grid2 container spacing={2} marginTop="2rem" justifyContent="space-evenly">
       {products ? (
         products.length > 0 ? (
           products.map((product) => (
-            <ProductCard key={product.id} product={product}/>
+            <ProductCard key={product.id} product={product} />
           ))
         ) : (
           <>
             <Skeleton
               variant="rounded"
               animation="wave"
-              width={250}
+              sx={{ width: { xs: 200, md: 250 } }}
               height={450}
             />
             <Skeleton
               variant="rounded"
               animation="wave"
-              width={250}
+              sx={{ width: { xs: 200, md: 250 } }}
               height={450}
             />
             <Skeleton
               variant="rounded"
               animation="wave"
-              width={250}
+              sx={{ width: { xs: 200, md: 250 } }}
               height={450}
             />
             <Skeleton
               variant="rounded"
               animation="wave"
-              width={250}
+              sx={{ width: { xs: 200, md: 250 } }}
+              height={450}
+            />
+            <Skeleton
+              variant="rounded"
+              animation="wave"
+              sx={{ width: { xs: 200, md: 250 } }}
+              height={450}
+            />
+            <Skeleton
+              variant="rounded"
+              animation="wave"
+              sx={{ width: { xs: 200, md: 250 } }}
+              height={450}
+            />
+            <Skeleton
+              variant="rounded"
+              animation="wave"
+              sx={{ width: { xs: 200, md: 250 } }}
+              height={450}
+            />
+            <Skeleton
+              variant="rounded"
+              animation="wave"
+              sx={{ width: { xs: 200, md: 250 } }}
+              height={450}
+            />
+            <Skeleton
+              variant="rounded"
+              animation="wave"
+              sx={{ width: { xs: 200, md: 250 } }}
               height={450}
             />
           </>
