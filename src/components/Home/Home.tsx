@@ -12,9 +12,10 @@ function Home() {
         alignItems: "center",
         padding: 3,
         maxWidth: "1000px",
-        maxHeight: "350px",
+        maxHeight: "450px",
         mx: "auto",
         my: "2rem",
+        flexDirection:{xs:"column", sm:"row"},
         borderRadius: "2rem",
       }}
     >
@@ -36,6 +37,7 @@ function Home() {
           variant="h3"
           sx={{
             fontWeight: "bold",
+            fontSize:{xs:"2rem", sm:"3rem"}
           }}
         >
           {t(TranslationKeys.SHOP_BEST)}
