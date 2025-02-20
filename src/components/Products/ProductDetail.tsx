@@ -43,11 +43,18 @@ function ProductDetail() {
       setQuantity(cartItems[product.id]?.quantity || 0);
     }
     dispatch(getProduct(Number(id)));
-  }, [dispatch]);
+  }, [dispatch, product]);
 
   return product ? (
     <>
-      <Container sx={{ padding: "1rem", display: "flex" }}>
+      <Container
+        sx={{
+          padding: "1rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "2rem",
+        }}
+      >
         <Box
           component="img"
           src={product.image}
@@ -61,12 +68,12 @@ function ProductDetail() {
           }}
         />
         <Stack spacing={4} width={"100%"}>
-          <Box paddingX={10}>
+          <Box paddingX={5}>
             <Typography variant="body1" fontWeight="medium" fontSize={30}>
               {product.title}
             </Typography>
           </Box>
-          <Box paddingX={10} display="flex" justifyContent="space-between">
+          <Box paddingX={5} display="flex" justifyContent="space-between">
             <Box>
               <Typography
                 variant="body1"
@@ -101,7 +108,7 @@ function ProductDetail() {
             </Box>
           </Box>
           <Divider variant="inset" />
-          <Box paddingX={10}>
+          <Box paddingX={5}>
             <Typography
               variant="body1"
               fontSize={"1.2rem"}
@@ -112,7 +119,7 @@ function ProductDetail() {
             <Typography variant="body1">{product.description}</Typography>
           </Box>
           <Divider variant="inset" />
-          <Box paddingX={10}>
+          <Box paddingX={5}>
             <Typography
               variant="body1"
               fontSize={"1.2rem"}
@@ -122,8 +129,8 @@ function ProductDetail() {
             </Typography>
             <Typography variant="body1">{product.category}</Typography>
           </Box>
-        </Stack>
         <Divider variant="inset" />
+        </Stack>
       </Container>
       <Box paddingBottom={"3rem"}>
         <Stack
