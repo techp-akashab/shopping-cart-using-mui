@@ -129,7 +129,7 @@ function ProductDetail() {
             </Typography>
             <Typography variant="body1">{product.category}</Typography>
           </Box>
-        <Divider variant="inset" />
+          <Divider variant="inset" />
         </Stack>
       </Container>
       <Box paddingBottom={"3rem"}>
